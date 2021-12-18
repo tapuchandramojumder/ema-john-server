@@ -36,7 +36,7 @@ client.connect(err => {
       
        res.send(result.insertedCount>0)
  
-    })
+    }) 
   })
   app.post('/orders',(req,res)=>{
 
@@ -83,4 +83,4 @@ app.get('/',(req,res)=>{
 
 
 
-app.listen(port)
+app.listen(process.env.PORT || port)
